@@ -1,0 +1,21 @@
+<div class="container">
+
+  <div class="row">
+    <div class="Absolute-Center is-Responsive">
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <h2>Github API Search</h2>
+        <br>
+        <form (ngSubmit)="githubSearch(username)" id="search">
+          <div class="form-group input-group">
+            <label>
+              <input [(ngModel)]="username" class="form-control" name='username' placeholder="Username" type="text"/>
+            </label>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-colour-1 btn-block" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

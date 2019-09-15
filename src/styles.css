@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import './styles/bootstrap-4.3.1-dist/bootstrap.min.css';
+
+body {
+  background-color: #43494D; /* The page background will be black */
+  color: white; /* The page text will be white */
+}
+
+.btn-colour-1 {
+  color: #fff;
+  background-color: #43494D;
+  border-color: #132b64;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+  border-width: 2px;
+}
+
+.btn-colour-1:hover,
+.btn-colour-1:active,
+.btn-colour-1:focus,
+.btn-colour-1.active {
+  /* let's darken #004E64 a bit for hover effect */
+  background: #003D4F;
+  color: #39ff4d;
+  border-color: #132b64;
+}
+

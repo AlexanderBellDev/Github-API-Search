@@ -1,0 +1,38 @@
+<br>
+<table *ngIf="repos" class="table table-dark table-hover">
+  <thead>
+  <tr>
+    <th>Repo ID</th>
+    <th>Repo Name</th>
+    <th>Repo Link</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let repo of repos">
+    <td (click)="open(content,repo.name)">{{repo.id}}</td>
+    <td (click)="open(content,repo.name)">{{repo.name}}</td>
+    <td><a href="http://github.com/{{repo.full_name}}">{{repo.full_name}}</a></td>
+  </tr>
+  </tbody>
+</table>
+
+
+<ng-template #content let-modal>
+  <div *ngIf="repoDetails" class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Repo Details</h4>
+    <button (click)="modal.dismiss('Cross click')" aria-label="Close" class="btn btn-light shadow-none" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div *ngIf="repoDetails" class="modal-body">
+    <h5>ID: {{repoDetails.id}}</h5>
+    <h5>Watchers: {{repoDetails.watchers}}</h5>
+    <h5>Size: {{repoDetails.size}}</h5>
+    <h5>Subscribers: {{repoDetails.subscribers_count}}</h5>
+  </div>
+</ng-template>
+
+
+<div class="row justify-content-center">
+  <a class="btn btn-colour-1 btn-lg" routerLink="/">Home</a>
+</div>
